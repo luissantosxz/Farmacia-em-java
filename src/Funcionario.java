@@ -1,13 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Funcionario extends Pessoa{
     private double salario;
     private String senha;
     private String cargo;
     Funcionario(){}
-
     public Funcionario(String nome, int idade, String genero, String cpf, String cargo, String senha, double salario){
         super(nome, idade, genero, cpf);
         setCargo(cargo);
@@ -26,8 +24,10 @@ public class Funcionario extends Pessoa{
 
     public void listaFuncionarios(ArrayList<Pessoa> funcionarios){
         for (Pessoa f : funcionarios){
-            System.out.println(f.toString());
-            System.out.println("=====================================");
+            if (f instanceof Funcionario) {
+                System.out.println(f.toString());
+                System.out.println("=====================================");
+            }
         }
     }
 
