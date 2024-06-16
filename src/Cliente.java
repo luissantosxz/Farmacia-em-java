@@ -14,8 +14,10 @@ public class Cliente extends Pessoa{
         System.out.println("=============================");
         System.out.println("--- Lista de Clientes ---");
         for(Pessoa c : clientes){
-            System.out.println(c.toString());
-            System.out.println("=============================");
+            if(c instanceof Cliente){
+                System.out.println(c.toString());
+                System.out.println("=============================");
+            }
         }
     }
 
